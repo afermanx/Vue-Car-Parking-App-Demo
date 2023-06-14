@@ -60,6 +60,18 @@ const router = createRouter({
         component: () => import("@/views/Vehicles/EditView.vue"),
     },
     {
+        path: "/parkings/active",
+        name: "parkings.active",
+        beforeEnter: auth,
+        component: () => import("@/views/Parkings/ActiveParkings.vue"),
+      },
+      {
+        path: "/parkings/new",
+        name: "parkings.create",
+        beforeEnter: auth,
+        component: () => import("@/views/Parkings/OrderParking.vue"),
+      },
+    {
         path: "/vehicles",
         name: "vehicles.index",
         beforeEnter: auth,
