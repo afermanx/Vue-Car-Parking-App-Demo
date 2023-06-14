@@ -14,6 +14,7 @@ onBeforeUnmount(store.resetForm);
       <div class="flex flex-col gap-2 mb-4">
         <label for="name" class="required">Name</label>
         <input
+          :disabled="store.loading"
           v-model="store.form.name"
           id="name"
           name="name"
@@ -28,6 +29,7 @@ onBeforeUnmount(store.resetForm);
       <div class="flex flex-col gap-2 mb-4">
         <label for="email" class="required">Email</label>
         <input
+          :disabled="store.loading"
           v-model="store.form.email"
           id="email"
           name="email"
@@ -42,6 +44,7 @@ onBeforeUnmount(store.resetForm);
       <div class="flex flex-col gap-2 mb-4">
         <label for="password" class="required">Password</label>
         <input
+          :disabled="store.loading"
           v-model="store.form.password"
           id="password"
           name="password"
@@ -58,6 +61,7 @@ onBeforeUnmount(store.resetForm);
           Confirm password
         </label>
         <input
+          :disabled="store.loading"
           v-model="store.form.password_confirmation"
           id="password_confirmation"
           name="password_confirmation"
@@ -71,7 +75,10 @@ onBeforeUnmount(store.resetForm);
       <div class="border-t h-[1px] my-6"></div>
 
       <div class="flex flex-col gap-2">
-        <button type="submit" class="btn btn-primary">Register</button>
+        <button
+        :disabled="store.loading" type="submit" class="btn btn-primary">
+        <IconSpinner v-show="store.loading" />
+        Register</button>
       </div>
     </div>
   </form>
