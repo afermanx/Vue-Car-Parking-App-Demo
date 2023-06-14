@@ -15,6 +15,7 @@ module.exports = {
     colors: {
         ...colors,
         green: {
+            ...colors.green,
             //...overwritten color values
         },
         transparent: 'transparent'

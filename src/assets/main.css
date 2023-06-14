@@ -8,7 +8,7 @@
     }
 
     .form-input {
-        @apply p-1 border bg-gray-100 disabled:opacity-50;
+        @apply p-1 bg-gray-100 border disabled:opacity-50;
     }
 
     .btn {
@@ -25,5 +25,12 @@
 
     .router-link-active.router-link {
         @apply underline;
+    }
+
+    .alert {
+        @apply relative px-4 py-3 border rounded;
+    }
+    .alert-success {
+        @apply text-green-700 bg-green-100 border-green-400;
     }
 }
