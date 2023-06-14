@@ -43,6 +43,7 @@ onMounted(store.getVehicles);
           </RouterLink>
           <button
             type="button"
+            @click="store.deleteVehicle(vehicle)"
             class="text-sm text-white bg-red-600 btn hover:bg-red-500"
           >
             X
