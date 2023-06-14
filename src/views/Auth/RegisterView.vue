@@ -9,8 +9,8 @@ onBeforeUnmount(store.resetForm);
 
 <template>
   <form @submit.prevent="store.handleSubmit" novalidate>
-    <div class="flex flex-col mx-auto md:w-96 w-full">
-      <h1 class="text-2xl font-bold mb-4 text-center">Register</h1>
+    <div class="flex flex-col w-full mx-auto md:w-96">
+      <h1 class="mb-4 text-2xl font-bold text-center">Register</h1>
       <div class="flex flex-col gap-2 mb-4">
         <label for="name" class="required">Name</label>
         <input
@@ -22,6 +22,7 @@ onBeforeUnmount(store.resetForm);
           autocomplete="name"
           required
         />
+        <ValidationError :errors="store.errors" field="name" />
       </div>
 
       <div class="flex flex-col gap-2 mb-4">
@@ -35,6 +36,7 @@ onBeforeUnmount(store.resetForm);
           autocomplete="email"
           required
         />
+        <ValidationError :errors="store.errors" field="email" />
       </div>
 
       <div class="flex flex-col gap-2 mb-4">
@@ -48,6 +50,7 @@ onBeforeUnmount(store.resetForm);
           autocomplete="new-password"
           required
         />
+        <ValidationError :errors="store.errors" field="password" />
       </div>
 
       <div class="flex flex-col gap-2">

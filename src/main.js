@@ -1,16 +1,18 @@
-import './assets/main.css'
-
 import "@/bootstrap.js";
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from "vue";
+import { createPinia } from "pinia";
 
-import App from './App.vue'
-import router from './router'
+import App from "./App.vue";
+import router from "./router";
+import ValidationError from "@/components/ValidationError.vue";
 
-const app = createApp(App)
+import "./assets/main.css";
 
-app.use(createPinia())
-app.use(router)
+const app = createApp(App);
 
-app.mount('#app')
+app.use(createPinia());
+app.use(router);
+app.component("ValidationError", ValidationError);
+
+app.mount("#app");
