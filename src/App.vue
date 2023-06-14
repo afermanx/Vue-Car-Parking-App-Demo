@@ -33,7 +33,13 @@ const auth = useAuth();
         <div class="flex items-center gap-4">
           <template v-if="auth.check">
             <RouterLink class="router-link" :to="{ name: 'profile.edit' }">
-                    Profile
+              Profile
+            </RouterLink>
+            <RouterLink
+              class="router-link"
+              :to="{ name: 'profile.change-password' }"
+            >
+              Change password
             </RouterLink>
             <button @click="auth.logout" class="router-link">Logout</button>
           </template>
