@@ -41,4 +41,7 @@
     .plate {
         @apply font-mono font-bold uppercase;
     }
+    .btn-danger {
+        @apply text-white bg-red-600 hover:bg-red-500;
+    }
 }
